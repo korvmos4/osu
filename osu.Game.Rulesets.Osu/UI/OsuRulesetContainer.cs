@@ -16,7 +16,9 @@ using osu.Game.Rulesets.UI;
 using osu.Game.Rulesets.Replays;
 
 namespace osu.Game.Rulesets.Osu.UI
-{
+{   /// <summary>
+    /// Container containing the diffrent ruleset components  
+    /// </summary>
     public class OsuRulesetContainer : RulesetContainer<OsuHitObject>
     {
         public OsuRulesetContainer(Ruleset ruleset, WorkingBeatmap beatmap, bool isForCurrentRuleset)

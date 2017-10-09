@@ -11,7 +11,7 @@ using osu.Game.Rulesets.Osu.OsuDifficulty.Preprocessing;
 using osu.Game.Rulesets.Osu.OsuDifficulty.Skills;
 
 namespace osu.Game.Rulesets.Osu.OsuDifficulty
-{
+{  
     public class OsuDifficultyCalculator : DifficultyCalculator<OsuHitObject>
     {
         private const int section_length = 400;

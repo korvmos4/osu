@@ -7,7 +7,9 @@ using osu.Game.Configuration;
 using osu.Game.Overlays.Settings;
 
 namespace osu.Game.Rulesets.Osu.UI
-{
+{   /// <summary>
+    /// Visual componet for settings for the rules 
+    /// </summary>
     public class OsuSettings : SettingsSubsection
     {
         protected override string Header => "osu!";

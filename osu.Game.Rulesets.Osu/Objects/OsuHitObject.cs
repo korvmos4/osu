@@ -10,7 +10,10 @@ using osu.Game.Beatmaps.ControlPoints;
 using osu.Game.Rulesets.Objects.Drawables;
 
 namespace osu.Game.Rulesets.Osu.Objects
-{
+{   /// <summary>
+    /// The hit boxes  for the diffrent objects and checks if the player
+    /// has decieds the param for hit or miss .
+    /// </summary>
     public abstract class OsuHitObject : HitObject, IHasCombo, IHasPosition
     {
         public const double OBJECT_RADIUS = 64;

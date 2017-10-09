@@ -12,7 +12,9 @@ using osu.Game.Rulesets.Osu.UI;
 using osu.Game.Rulesets.Beatmaps;
 
 namespace osu.Game.Rulesets.Osu.Beatmaps
-{
+{   /// <summary>
+    /// Makes the object for this beatmap according to the rules 
+    /// </summary>
     internal class OsuBeatmapConverter : BeatmapConverter<OsuHitObject>
     {
         protected override IEnumerable<Type> ValidConversionTypes { get; } = new[] { typeof(IHasPosition) };

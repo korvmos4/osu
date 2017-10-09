@@ -14,7 +14,10 @@ using osu.Game.Rulesets.Osu.UI;
 using osu.Game.Rulesets.Scoring;
 using osu.Game.Rulesets.UI;
 using OpenTK;
-
+/// <summary>
+/// All available mods is listed here. And can be modified accordingly to your preferens.
+/// Here you can add your own mods or expand on someone already existing.
+/// </summary>
 namespace osu.Game.Rulesets.Osu.Mods
 {
     public class OsuModNoFail : ModNoFail

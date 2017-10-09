@@ -9,9 +9,13 @@ using osu.Game.Rulesets.Osu.Objects;
 using osu.Game.Rulesets.Osu.Objects.Drawables;
 
 namespace osu.Game.Rulesets.Osu.Beatmaps
-{
+{   
     internal class OsuBeatmapProcessor : BeatmapProcessor<OsuHitObject>
-    {
+    {   /// <summary>
+        /// keep track of how many object the person has hit in a row.
+        /// And display a diffrent colour for each level of combo
+        /// </summary>
+        
         public override void PostProcess(Beatmap<OsuHitObject> beatmap)
         {
             applyStacking(beatmap);

@@ -50,7 +50,9 @@ namespace osu.Game.Rulesets.Osu.Scoring
                 AddJudgement(new OsuJudgement { Result = HitResult.Great });
             }
         }
-
+        /// <summary>
+        /// Reset current score and combo counter
+        /// </summary>
         protected override void Reset(bool storeResults)
         {
             base.Reset(storeResults);
@@ -58,7 +60,7 @@ namespace osu.Game.Rulesets.Osu.Scoring
             scoreResultCounts.Clear();
             comboResultCounts.Clear();
         }
-
+   
         public override void PopulateScore(Score score)
         {
             base.PopulateScore(score);
@@ -68,7 +70,11 @@ namespace osu.Game.Rulesets.Osu.Scoring
             score.Statistics[@"50"] = scoreResultCounts.GetOrDefault(HitResult.Meh);
             score.Statistics[@"x"] = scoreResultCounts.GetOrDefault(HitResult.Miss);
         }
-
+        /// <summary>
+        /// decieds how many "hit points" you hav left.
+        /// For diffrent hit result the "health" of the player
+        /// is calculted accordingly to set numbers.
+        /// </summary>
         protected override void OnNewJudgement(Judgement judgement)
         {
             base.OnNewJudgement(judgement);

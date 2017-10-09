@@ -20,7 +20,9 @@ namespace osu.Game.Rulesets.Osu
     public class OsuRuleset : Ruleset
     {
         public override RulesetContainer CreateRulesetContainerWith(WorkingBeatmap beatmap, bool isForCurrentRuleset) => new OsuRulesetContainer(this, beatmap, isForCurrentRuleset);
-
+        /// <summary>
+        /// z = left mouse click and x = right mouse click, If you want to play with your keyboard instead of the mouse. 
+        /// </summary>
         public override IEnumerable<KeyBinding> GetDefaultKeyBindings(int variant = 0) => new[]
         {
             new KeyBinding(InputKey.Z, OsuAction.LeftButton),
@@ -28,7 +30,9 @@ namespace osu.Game.Rulesets.Osu
             new KeyBinding(InputKey.MouseLeft, OsuAction.LeftButton),
             new KeyBinding(InputKey.MouseRight, OsuAction.RightButton),
         };
-
+        /// <summary>
+        /// Statistic for how many many object(circle and sliders) you have hit during the came 
+        /// </summary>
         public override IEnumerable<BeatmapStatistic> GetBeatmapStatistics(WorkingBeatmap beatmap) => new[]
             {
             new BeatmapStatistic
@@ -44,7 +48,10 @@ namespace osu.Game.Rulesets.Osu
                 Icon = FontAwesome.fa_circle_o
             }
         };
-
+        /// <summary>
+        /// config for three diffrent modes, for special,increase and reduction difficulty. 
+        /// in theese three you can also select diffrent modification for example no fail,halftime and suddendeath.
+        /// </summary>
         public override IEnumerable<Mod> GetModsFor(ModType type)
         {
             switch (type)
@@ -120,6 +127,7 @@ namespace osu.Game.Rulesets.Osu
 
         public override int LegacyID => 0;
 
+       
         public OsuRuleset(RulesetInfo rulesetInfo)
             : base(rulesetInfo)
         {
